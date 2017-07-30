@@ -88,8 +88,10 @@ public class VentanaInicial extends JFrame{
         MenuAyuda.add(AcercaDe);
         MenuAyuda.add(Tutorial);
       
-        
-
+        //Propiedades de la ventana
+        setLocationRelativeTo(null);//para centrar la ventana.
+        setTitle("Juego de Letras");//Titulo de la ventana.
+        setResizable(false);
         
         setJMenuBar(BarraDeMenu);
         
