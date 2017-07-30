@@ -105,6 +105,96 @@ public class VentanaInicial extends JFrame{
         ImagenInicial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/PENSANDO.gif"))); 
         ImagenInicial.setBorder(null);
        
+        //ImagenInicial.setMargin();
+        
+        //this.setIconImage(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("icono.png")));
+
+        TituloInicial.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); 
+        TituloInicial.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TituloInicial.setText("CARLOS JOEL...ROGER FRANCO");
+        
+
+        //Acciones de los Menus
+        JugarIniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                JugarIniciarActionPerformed(evt);
+            }
+        });
+        
+        
+        JugarSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                JugarSalirActionPerformed(evt);
+            }
+        });
+        
+        
+        AcercaDe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                AcercaDeActionPerformed(evt);
+            }
+        });
+        
+        Tutorial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                TutorialActionPerformed(evt);
+            }
+        });
+        
+        Nivel1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                Nivel1ActionPerformed(evt);
+            }
+        });
+        
+        Nivel2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                Nivel2ActionPerformed(evt);
+            }
+        });
+        
+        Nivel3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                Nivel3ActionPerformed(evt);
+            }
+        });
+        
+        DibujosAnimados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(ActionEvent evt){
+                DibujosAnimadosActionPerformed(evt);
+            }
+        });
+        
+        Numeros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(ActionEvent evt){
+                NumerosActionPerformed(evt);
+            }
+        });
+        
+        Abecedario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(ActionEvent evt){
+                AbecedarioActionPerformed(evt);
+            }
+        });
+                
+        CuerpoHumano.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(ActionEvent evt){
+                CuerpoHumanoActionPerformed(evt);
+            }
+        });
+                        
+        FrutasyVerduras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(ActionEvent evt){
+                FrutasyVerdurasActionPerformed(evt);
+            }
+        });
+                                
+        Animales.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(ActionEvent evt){
+                AnimalesActionPerformed(evt);
+            }
+        });
+
         
         setJMenuBar(BarraDeMenu);
         
@@ -113,8 +203,8 @@ public class VentanaInicial extends JFrame{
         pack();
 
     }
+
     
-             
     private void saludoFinal(java.awt.event.WindowEvent evt){
         setVisible(false);
         JOptionPane.showMessageDialog(this,"Esta aplicacion fue creada por los alumnos de la Universidd Nacional Jose Maria Arguedas"

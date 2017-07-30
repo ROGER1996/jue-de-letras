@@ -35,6 +35,45 @@ public class Tablero
 	{
 		return dim;
 	}
-	
-	
+	public boolean esCompleto()
+	{
+		int c = 0;
+		for (int i = 0; i < dim; i++)
+		{
+			for (int j = 0; j < dim; j++)
+			{
+				if(X[i][j])
+					c++;
+			}
+		}
+		if(c == dim * dim)
+			return true;
+		return false;
+	}
+	public void genAleatorio()
+	{
+		int g = 1;
+		for (int i = 0; i < dim; i++)
+		{
+			for (int j = 0; j < dim; j++)
+			{
+				M[i][j] = g++;
+				if(g == (dim*dim)/2+1)
+					g = 1;
+			}
+                        
+		}
+		int x, y;
+		for (int i = 0; i < dim; i++)
+		{
+			for (int j = 0; j < dim; j++)
+			{
+				x = (int) (Math.random() * dim);
+				y = (int) (Math.random() * dim);
+				int aux = M[i][j];
+				M[i][j] = M[x][y];
+				M[x][y] = aux;
+			}
+		}
+	}
 }
