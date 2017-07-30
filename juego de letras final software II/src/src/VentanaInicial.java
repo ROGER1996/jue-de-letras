@@ -199,12 +199,116 @@ public class VentanaInicial extends JFrame{
         setJMenuBar(BarraDeMenu);
         
 
-        
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(ImagenInicial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(TituloInicial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(TituloInicial, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ImagenInicial))
+        );
+
         pack();
 
     }
+    //acciones de los botones
+    private void JugarIniciarActionPerformed(java.awt.event.ActionEvent evt) {
+        setVisible(false);
+        new Casillas(level,cate);
+    }                                            
 
+    private void JugarSalirActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        setVisible(false);
+        JOptionPane.showMessageDialog(this,"Esta aplicacion fue creada por los alumnos de la Universidd Nacional Jose Maria Arguedas"
+                + "\n Carrera Profesional de Ingenieria de Sistemas "
+                + "\n alumnos:carlos joel rivera maquera, roger franco ortiz "
+                + "\n 8vo Ciclo "
+                + "\n  creado en  01/07/2017. \n ", "GRACIAS! - Espero lo haya disfrutado.",JOptionPane.INFORMATION_MESSAGE, null);
+        System.exit(0);
+    }
     
+    private void AcercaDeActionPerformed(ActionEvent evt) {
+        JOptionPane.showMessageDialog(this,"Esta aplicacion fue creada por los alumnos de la Universidd Nacional Jose Maria Arguedas"
+                + "\n Carrera Profesional de Ingenieria de Sistemas "
+                + "\n alumnos:carlos joel rivera maquera, roger franco ortiz "
+                + "\n 8vo Ciclo "
+                + "\n  creado en  01/07/2017. \n ", "GRACIAS! - Espero lo haya disfrutado.",JOptionPane.INFORMATION_MESSAGE, null);
+    }
+    
+    private void TutorialActionPerformed(ActionEvent evt) {
+        
+        JOptionPane.showMessageDialog(this,"*En este juego debe tratar de recordar la ubicación de cada imagen y ubicar su pareja."
+                +"\n*Al ismo tiempo de recordar aprender las palabras y vocabulario."
+                +"\n*Aprenderas de la manera mas didactica las vocales y abecedarios."
+                +"\n*Cada casilla mostrara su imagen oculta al hacer click sobre ella y se ocultara si la pareja no coincide."
+                + "\n*Cuando halla encontrado todos los pares de imagenes habra logrado completar el juego."
+                + "\n*Si lo desea podrá cambiar de nivel de dificultad o de categoria.", "Instruciones del juego",JOptionPane.INFORMATION_MESSAGE, null);
+    }
+    
+    private void Nivel1ActionPerformed(ActionEvent evt) {
+        level=4;
+        JOptionPane.showMessageDialog(this,"Por favor elija la categoria que se desea jugar."
+                + " dirigase al menu Opciones Categorias y elija uno", "DEBE ELEGIR UNA CATEGORIA",JOptionPane.INFORMATION_MESSAGE, null);
+    }
+    
+    private void Nivel2ActionPerformed(ActionEvent evt) {
+        level=6;
+        JOptionPane.showMessageDialog(this,"Por favor elija la categoria que se desea jugar."
+                + " dirigase al menu Opciones Categorias y elija uno", "DEBE ELEGIR UNA CATEGORIA",JOptionPane.INFORMATION_MESSAGE, null);
+   }
+    
+    private void Nivel3ActionPerformed(ActionEvent evt) {
+        level=8;
+        JOptionPane.showMessageDialog(this,"Por favor elija la categoria que se desea jugar."
+                + " dirigase al menu Opciones Categorias y elija uno", "DEBE ELEGIR UNA CATEGORIA",JOptionPane.INFORMATION_MESSAGE, null);
+    }
+    
+    private void DibujosAnimadosActionPerformed(ActionEvent evt) {
+        setVisible(false);
+        cate=1;
+        new Casillas(level,cate);
+    }
+        
+    private void NumerosActionPerformed(ActionEvent evt) {
+        setVisible(false);
+        cate=2;
+        new Casillas(level,cate);
+    }
+            
+    private void AbecedarioActionPerformed(ActionEvent evt) {
+        setVisible(false);
+        cate=3;
+        new Casillas(level,cate);
+    }
+    
+    private void CuerpoHumanoActionPerformed(ActionEvent evt) {
+        setVisible(false);
+        cate=4;
+        new Casillas(level,cate);
+    }
+        
+    private void FrutasyVerdurasActionPerformed(ActionEvent evt) {
+        setVisible(false);
+        cate=5;
+        new Casillas(level,cate);
+    }
+            
+    private void AnimalesActionPerformed(ActionEvent evt) {
+        setVisible(false);
+        cate=6;
+        new Casillas(level,cate);
+    }
+             
     private void saludoFinal(java.awt.event.WindowEvent evt){
         setVisible(false);
         JOptionPane.showMessageDialog(this,"Esta aplicacion fue creada por los alumnos de la Universidd Nacional Jose Maria Arguedas"

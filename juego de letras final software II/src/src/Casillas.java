@@ -49,8 +49,42 @@ public class Casillas extends JFrame implements ActionListener
                 setVisible(true);
 	}
 	
-        
-
+	public void accion(int x, int y)
+	{
+		switch (sw)
+		{
+		case 0:
+			if(!t.esClic(x, y))
+			{
+				t.clic(x, y);
+				botones[x][y].setIcon(imagenes[t.getPos(x,y)]);
+				sw = 1;
+				a = x;
+				b = y;
+			}
+			break;
+		case 1:
+			if(!t.esClic(x, y))
+			{
+				t.clic(x, y);
+				botones[x][y].setIcon(imagenes[t.getPos(x,y)]);
+				ii = x;
+				jj = y;
+				if(t.getPos(a, b) != t.getPos(ii, jj))
+					sw = 2;
+				else
+					sw = 0;
+			}
+			break;
+		case 2:
+			botones[a][b].setIcon(null);
+			botones[ii][jj].setIcon(null);
+			t.clic(a, b);
+			t.clic(ii, jj);
+			sw = 0;
+			break;
+		}
+	}
 	public void actionPerformed(ActionEvent ae)
 	{
 		int d = dimen;//t.getDim();
