@@ -92,6 +92,19 @@ public class VentanaInicial extends JFrame{
         setLocationRelativeTo(null);//para centrar la ventana.
         setTitle("Juego de Letras");//Titulo de la ventana.
         setResizable(false);
+        //setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+                    public void windowClosing(java.awt.event.WindowEvent evt) {
+                    saludoFinal(evt);
+                    }
+        });
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLocation(new java.awt.Point(500, 250));
+ 
+
+        ImagenInicial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/PENSANDO.gif"))); 
+        ImagenInicial.setBorder(null);
+       
         
         setJMenuBar(BarraDeMenu);
         
@@ -101,5 +114,15 @@ public class VentanaInicial extends JFrame{
 
     }
     
+             
+    private void saludoFinal(java.awt.event.WindowEvent evt){
+        setVisible(false);
+        JOptionPane.showMessageDialog(this,"Esta aplicacion fue creada por los alumnos de la Universidd Nacional Jose Maria Arguedas"
+                + "\n Carrera Profesional de Ingenieria de Sistemas "
+                + "\n alumnos:carlos joel rivera maquera, roger franco ortiz "
+                + "\n 8vo Ciclo "
+                + "\n  creado en  01/07/2017. \n ", "GRACIAS! - Espero lo haya disfrutado.",JOptionPane.INFORMATION_MESSAGE, null);
+        System.exit(0);
+    }
         
 }
