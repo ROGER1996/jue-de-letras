@@ -66,9 +66,34 @@ public class VentanaInicial extends JFrame{
         bg.add(FrutasyVerduras);
         bg.add(Animales);
         
+        //agrego los submenus a los menus.
+        BarraDeMenu.add(MenuJugar);
+        BarraDeMenu.add(MenuOpciones);
+        BarraDeMenu.add(MenuAyuda);
+        MenuJugar.add(JugarIniciar);
+        MenuJugar.add(JugarSalir);
+        MenuOpciones.add(OpcionesNiveles);
+        MenuOpciones.add(OpcionesCategorias);
+        OpcionesNiveles.add(Nivel1);
+        OpcionesNiveles.add(Nivel2);
+        OpcionesNiveles.add(Nivel3);
         
+        OpcionesCategorias.add(DibujosAnimados);
+        OpcionesCategorias.add(Numeros);
+        OpcionesCategorias.add(Abecedario);
+        OpcionesCategorias.add(CuerpoHumano);
+        OpcionesCategorias.add(FrutasyVerduras);
+        OpcionesCategorias.add(Animales);
+        
+        MenuAyuda.add(AcercaDe);
+        MenuAyuda.add(Tutorial);
+      
+        
+
         
         setJMenuBar(BarraDeMenu);
+        
+
         
         pack();
 
