@@ -122,6 +122,28 @@ public class Casillas extends JFrame implements ActionListener
                 break;             
                 
                 
+                case 4:                                   
+                int g = dimen;//t.getDim();
+                imagenes = new ImageIcon[g*g/2+1];
+                imagenes[0] = null;
+
+                for (int i = 1; i <= g*g/2; i++)
+                    imagenes[i] = new ImageIcon(getClass().getResource("/Imagenes/CuerpoHumano/" + i + ".gif"));
+                JPanel D = new JPanel(new GridLayout(g,g));
+                botones = new JButton[g][g];
+                for (int i = 0; i < g; i++)
+                {
+                    for (int j = 0; j < g; j++)
+                    {
+                        botones[i][j] = new JButton();
+                        botones[i][j].addActionListener(this);
+                        D.add(botones[i][j]);
+                    }
+                }
+                this.add(D,"Center");
+                break;  
+                
+                
                 
                 default:
                 break;
