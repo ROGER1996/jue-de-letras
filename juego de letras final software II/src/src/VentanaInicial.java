@@ -233,7 +233,7 @@ public class VentanaInicial extends JFrame{
                 + "\n Carrera Profesional de Ingenieria de Sistemas "
                 + "\n alumnos:carlos joel rivera maquera, roger franco ortiz "
                 + "\n 8vo Ciclo "
-                + "\n  creado en  01/07/2017. \n ", "GRACIAS! - Espero lo haya disfrutado.",JOptionPane.INFORMATION_MESSAGE, null);
+                + "\n  ", "GRACIAS! - Espero lo haya disfrutado.",JOptionPane.INFORMATION_MESSAGE, null);
         System.exit(0);
     }
     
@@ -242,7 +242,7 @@ public class VentanaInicial extends JFrame{
                 + "\n Carrera Profesional de Ingenieria de Sistemas "
                 + "\n alumnos:carlos joel rivera maquera, roger franco ortiz "
                 + "\n 8vo Ciclo "
-                + "\n  creado en  01/07/2017. \n ", "GRACIAS! - Espero lo haya disfrutado.",JOptionPane.INFORMATION_MESSAGE, null);
+                + "\n   ", "GRACIAS! - Espero lo haya disfrutado.",JOptionPane.INFORMATION_MESSAGE, null);
     }
     
     private void TutorialActionPerformed(ActionEvent evt) {
@@ -315,7 +315,7 @@ public class VentanaInicial extends JFrame{
                 + "\n Carrera Profesional de Ingenieria de Sistemas "
                 + "\n alumnos:carlos joel rivera maquera, roger franco ortiz "
                 + "\n 8vo Ciclo "
-                + "\n  creado en  01/07/2017. \n ", "GRACIAS! - Espero lo haya disfrutado.",JOptionPane.INFORMATION_MESSAGE, null);
+                + "\n  ", "GRACIAS! - Espero lo haya disfrutado.",JOptionPane.INFORMATION_MESSAGE, null);
         System.exit(0);
     }
         
